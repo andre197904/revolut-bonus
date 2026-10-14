@@ -1,0 +1,1217 @@
+<!DOCTYPE html>
+<html lang="ru" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <!-- ============================================================
+       ВСЕ CTA-КНОПКИ ВЕДУТ НА:
+       https://revolut.com/referral/?referral-code=kapralovai!OCT1-26-AR&geo-redirect
+       ============================================================ -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover" />
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="color-scheme" content="dark" />
+
+  <title>Revolut Bonus — бонус за регистрацию по приглашению</title>
+  <meta name="description" content="Зарегистрируйтесь в Revolut по приглашению и получите бонус. Более 80 млн пользователей. Мультивалютный счёт, Apple Pay и Google Pay, мгновенные переводы без комиссий." />
+  <meta name="theme-color" content="#0E0E10" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://images.unsplash.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          screens: {
+            'xs': '400px'
+          },
+          colors: {
+            base: '#0E0E10',
+            surface: '#18181B',
+            surface2: '#1C1C20'
+          },
+          fontFamily: {
+            sans: ['Inter', 'ui-sans-serif', 'system-ui', '-apple-system', 'Segoe UI', 'Roboto', 'sans-serif']
+          },
+          boxShadow: {
+            glow: '0 0 60px -15px rgba(99,102,241,0.65)',
+            card: '0 20px 40px -20px rgba(0,0,0,0.9)',
+            image: '0 40px 90px -30px rgba(0,0,0,0.95)'
+          },
+          keyframes: {
+            shine: {
+              '0%': { backgroundPosition: '0% 50%' },
+              '100%': { backgroundPosition: '200% 50%' }
+            }
+          },
+          animation: {
+            shine: 'shine 6s linear infinite'
+          }
+        }
+      }
+    };
+  </script>
+
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+
+  <style>
+    :root {
+      --white: #fffef7;
+      --ink: #0E0E10;
+      --muted: #94A3B8;
+      --muted-strong: #CBD5E1;
+    }
+
+    /* ============================================================
+       СКРОЛЛ: страница НЕ блокируется.
+       Вертикальная прокрутка разрешена (overflow-y: auto),
+       горизонтальная обрезается (overflow-x: hidden).
+       ============================================================ */
+    html {
+      -webkit-tap-highlight-color: transparent;
+      -webkit-text-size-adjust: 100%;
+      text-size-adjust: 100%;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: auto;
+      max-width: 100%;
+      width: 100%;
+      position: relative;
+    }
+
+    body {
+      overflow-x: hidden;
+      overflow-y: auto;
+      height: auto;
+      max-width: 100%;
+      width: 100%;
+      position: relative;
+      color: #fffef7;
+      background-color: #0E0E10;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+      text-rendering: optimizeLegibility;
+      overscroll-behavior-y: auto;
+      touch-action: pan-y;
+    }
+
+    /* ============================================================
+       БАЗОВАЯ ЗАЩИТА ОТ ЧЁРНОГО ТЕКСТА НА ТЁМНОМ ФОНЕ
+       ============================================================ */
+    header,
+    section,
+    footer,
+    main,
+    .dark-section {
+      color: #fffef7 !important;
+    }
+
+    section h1,
+    section h2,
+    section h3,
+    section h4,
+    section p,
+    section li,
+    footer h1,
+    footer h2,
+    footer h3,
+    footer p,
+    footer li,
+    footer a,
+    footer span {
+      color: inherit;
+    }
+
+    .text-on-dark,
+    .text-on-dark *,
+    .force-white,
+    .force-white * {
+      color: #fffef7 !important;
+    }
+
+    /* ВСЕ CTA-ССЫЛКИ на Revolut (кроме светлых кнопок .btn-light) */
+    a[href*="revolut.com/referral"]:not(.btn-light),
+    a[href*="revolut.com/referral"]:not(.btn-light) *,
+    a[href*="revolut.com/referral"]:not(.btn-light) svg,
+    a[href*="revolut.com/referral"]:not(.btn-light) svg * {
+      color: #fffef7 !important;
+      stroke: currentColor;
+    }
+
+    .btn-light,
+    .btn-light *,
+    .btn-light svg,
+    .btn-light svg * {
+      color: #0E0E10 !important;
+      stroke: currentColor;
+    }
+
+    .btn-cta-outline,
+    .btn-cta-outline *,
+    .btn-cta-outline svg,
+    .btn-cta-outline svg * {
+      color: #fffef7 !important;
+      stroke: currentColor;
+    }
+
+    .biz-offer,
+    .biz-offer * {
+      color: #fffef7 !important;
+    }
+
+    .safe-x {
+      padding-left: max(1.25rem, env(safe-area-inset-left));
+      padding-right: max(1.25rem, env(safe-area-inset-right));
+    }
+    .safe-top { padding-top: env(safe-area-inset-top); }
+    .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+
+    .touch-target {
+      min-height: 48px;
+      min-width: 48px;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .hover-lift:hover { transform: translateY(-6px); }
+    }
+
+    .grid-bg {
+      background-image:
+        linear-gradient(to right, rgba(255,255,255,0.045) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(255,255,255,0.045) 1px, transparent 1px);
+      background-size: 64px 64px;
+      -webkit-mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+      mask-image: radial-gradient(ellipse 80% 60% at 50% 0%, #000 40%, transparent 100%);
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      pointer-events: none;
+      background:
+        radial-gradient(ellipse 90% 70% at 50% 35%, rgba(14,14,16,0.55) 0%, rgba(14,14,16,0.25) 55%, rgba(14,14,16,0) 100%),
+        linear-gradient(to bottom, rgba(14,14,16,0.55) 0%, rgba(14,14,16,0) 30%, rgba(14,14,16,0) 70%, rgba(14,14,16,0.7) 100%);
+    }
+
+    .hero-content { position: relative; z-index: 2; }
+
+    .btn-gradient {
+      background-image: linear-gradient(100deg, #2563EB 0%, #6366F1 35%, #A855F7 70%, #2563EB 100%);
+      background-size: 200% 100%;
+      animation: shine 8s linear infinite;
+      color: #fffef7 !important;
+    }
+    .btn-gradient,
+    .btn-gradient *,
+    .btn-gradient svg,
+    .btn-gradient svg * {
+      color: #fffef7 !important;
+      stroke: currentColor;
+    }
+
+    .btn-light {
+      background-color: #FFFFFF;
+      color: #0E0E10 !important;
+    }
+    .btn-light:hover { background-color: #E2E8F0; }
+
+    .reveal {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .7s cubic-bezier(.22,1,.36,1), transform .7s cubic-bezier(.22,1,.36,1);
+    }
+    .reveal.is-visible {
+      opacity: 1;
+      transform: none;
+    }
+    @media (prefers-reduced-motion: reduce) {
+      .reveal { opacity: 1; transform: none; transition: none; }
+      .btn-gradient { animation: none; }
+    }
+
+    .break-anywhere {
+      overflow-wrap: anywhere;
+      word-break: break-word;
+      hyphens: auto;
+    }
+
+    /* ============ Image blocks ============ */
+    .img-frame {
+      position: relative;
+      overflow: hidden;
+      border-radius: 24px;
+      border: 1px solid #1e293b;
+      background-color: #18181b;
+      box-shadow: 0 40px 90px -30px rgba(0,0,0,0.95);
+    }
+    @media (min-width: 640px) {
+      .img-frame { border-radius: 28px; }
+    }
+    .img-frame img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: transform 1.2s cubic-bezier(.22,1,.36,1);
+      will-change: transform;
+    }
+    @media (hover: hover) and (pointer: fine) {
+      .img-frame:hover img { transform: scale(1.04); }
+    }
+    .img-frame::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background: linear-gradient(to top, rgba(14,14,16,0.65) 0%, rgba(14,14,16,0.1) 45%, rgba(14,14,16,0) 100%);
+    }
+    .img-frame.no-overlay::after {
+      background: linear-gradient(to top, rgba(14,14,16,0.35) 0%, rgba(14,14,16,0) 45%);
+    }
+    .img-glow {
+      position: absolute;
+      inset: -24px;
+      border-radius: 40px;
+      background: linear-gradient(120deg, rgba(37,99,235,0.35), rgba(99,102,241,0.30), rgba(168,85,247,0.30));
+      filter: blur(48px);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    /* ============ Language switcher (только текст: RU / ET / EN) ============ */
+    .lang-btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 30px;
+      padding: 0 9px;
+      font-family: inherit;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      line-height: 1;
+      text-transform: uppercase;
+      color: #94a3b8;
+      background: transparent;
+      border: 0;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: color .2s, background-color .2s, transform .15s;
+      -webkit-tap-highlight-color: transparent;
+      user-select: none;
+    }
+    .lang-btn:hover { color: #ffffff; }
+    .lang-btn:active { transform: scale(0.94); }
+    .lang-btn.active {
+      background: #ffffff;
+      color: #0e0e10 !important;
+    }
+    .lang-btn:focus-visible {
+      outline: 2px solid #6366f1;
+      outline-offset: 2px;
+    }
+    @media (min-width: 640px) {
+      .lang-btn {
+        padding: 0 11px;
+        min-height: 32px;
+        font-size: 12px;
+      }
+    }
+
+    /* ============ Cookie banner ============ */
+    #cookie-banner {
+      background-color: #131924;
+      border-top: 1px solid #263044;
+      color: #fffef7;
+      box-shadow: 0 -20px 50px -20px rgba(0,0,0,0.85);
+      padding-bottom: env(safe-area-inset-bottom);
+      transform: translateY(100%);
+      opacity: 0;
+      transition: transform .5s cubic-bezier(.22,1,.36,1), opacity .4s ease;
+      will-change: transform, opacity;
+    }
+    #cookie-banner.is-shown { transform: translateY(0); opacity: 1; }
+    #cookie-banner.is-hiding { transform: translateY(100%); opacity: 0; pointer-events: none; }
+    #cookie-banner[hidden] { display: none; }
+    #cookie-banner,
+    #cookie-banner p,
+    #cookie-banner .cookie-accept,
+    #cookie-banner .cookie-decline { color: #fffef7; }
+    #cookie-banner .cookie-text { color: #cbd5e1; }
+    #cookie-banner .cookie-accept { background-color: #fbbf24; color: #0E0E10 !important; }
+    #cookie-banner .cookie-accept:hover { background-color: #fcd34d; }
+    #cookie-banner .cookie-decline {
+      background-color: transparent;
+      border: 1px solid #334155;
+      color: #cbd5e1 !important;
+    }
+    #cookie-banner .cookie-decline:hover { background-color: rgba(255,255,255,0.06); color: #ffffff !important; }
+    #cookie-banner button:focus-visible { outline: 2px solid #6366f1; outline-offset: 2px; }
+    @media (prefers-reduced-motion: reduce) {
+      #cookie-banner { transition: none; }
+    }
+  </style>
+</head>
+
+<body class="bg-base font-sans text-white antialiased selection:bg-indigo-500/30 selection:text-white">
+
+  <!-- ======================= HEADER ======================= -->
+  <header class="sticky top-0 z-50 border-b border-slate-800/80 bg-base/85 backdrop-blur-xl">
+    <div class="safe-top">
+      <div class="safe-x mx-auto flex max-w-6xl items-center justify-between gap-2 py-2.5 sm:gap-3 sm:py-3.5">
+
+        <a href="#" class="group flex shrink-0 items-center gap-2" aria-label="Revolut Bonus">
+          <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 shadow-lg shadow-indigo-500/30 transition-transform duration-300 group-hover:scale-105">
+            <i data-lucide="sparkles" class="h-5 w-5 text-white"></i>
+          </span>
+          <span class="hidden text-[15px] font-bold tracking-tight sm:inline">
+            Revolut <span class="font-medium text-slate-400">Bonus</span>
+          </span>
+        </a>
+
+        <div class="flex items-center gap-2 sm:gap-3">
+
+          <span class="hidden items-center gap-2 rounded-full border border-amber-500/30 bg-amber-500/10 px-3 py-1.5 text-[11px] font-semibold uppercase tracking-wide text-amber-300 lg:inline-flex">
+            <span class="relative flex h-1.5 w-1.5">
+              <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-amber-400 opacity-75"></span>
+              <span class="relative inline-flex h-1.5 w-1.5 rounded-full bg-amber-400"></span>
+            </span>
+            <span data-i18n="header.badge">Ограниченное предложение</span>
+          </span>
+
+          <div id="lang-switcher" class="flex items-center rounded-xl border border-slate-800 bg-surface p-0.5" role="group" aria-label="Language / Язык / Keel">
+            <button type="button" data-lang="ru" class="lang-btn" aria-label="Русский" title="Русский">RU</button>
+            <button type="button" data-lang="et" class="lang-btn" aria-label="Eesti" title="Eesti">ET</button>
+            <button type="button" data-lang="en" class="lang-btn" aria-label="English" title="English">EN</button>
+          </div>
+
+          <a
+            href="https://revolut.com/referral/?referral-code=kapralovai!OCT1-26-AR&amp;geo-redirect"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-light inline-flex min-h-[40px] shrink-0 items-center justify-center gap-1.5 rounded-xl px-3 py-2 text-[11px] font-semibold transition-all duration-300 hover:shadow-[0_0_25px_-5px_rgba(255,255,255,0.5)] active:scale-95 sm:min-h-[44px] sm:px-4 sm:text-sm">
+            <span data-i18n="header.cta">Получить бонус</span>
+          </a>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <!-- ======================= HERO ======================= -->
+  <section class="hero relative overflow-hidden">
+    <div class="pointer-events-none absolute inset-0 grid-bg"></div>
+    <div class="pointer-events-none absolute -top-40 left-1/2 h-[420px] w-[min(820px,120vw)] -translate-x-1/2 rounded-full bg-indigo-600/20 blur-[130px]"></div>
+    <div class="pointer-events-none absolute -bottom-32 right-0 h-[320px] w-[320px] rounded-full bg-blue-600/10 blur-[120px]"></div>
+    <div class="hero-overlay" aria-hidden="true"></div>
+
+    <div class="hero-content safe-x relative mx-auto max-w-6xl pb-16 pt-12 sm:pb-20 sm:pt-16 lg:pb-24 lg:pt-24">
+      <div class="mx-auto max-w-3xl text-center">
+
+        <div class="mb-6 flex justify-center">
+          <span class="inline-flex max-w-full items-center gap-2 rounded-full border border-slate-800 bg-surface/80 px-4 py-2 text-xs font-medium text-slate-300 backdrop-blur sm:text-sm">
+            <i data-lucide="gift" class="h-4 w-4 shrink-0 text-indigo-400"></i>
+            <span class="break-anywhere" data-i18n="hero.badge">Персональное приглашение · Revolut Bonus</span>
+          </span>
+        </div>
+
+        <h1 class="text-[28px] font-extrabold leading-[1.15] tracking-tight text-white xs:text-3xl sm:text-5xl lg:text-6xl">
+          <span data-i18n="hero.h1.line1">Получите бонус</span>
+          <span class="block bg-gradient-to-r from-blue-400 via-indigo-400 to-purple-400 bg-clip-text text-transparent" data-i18n="hero.h1.line2">
+            при регистрации в Revolut
+          </span>
+        </h1>
+
+        <p class="mx-auto mt-5 max-w-2xl text-[15px] leading-relaxed text-slate-400 sm:mt-6 sm:text-lg"
+           data-i18n-html="hero.subtitle">
+          Присоединяйтесь к более чем <span class="font-semibold text-slate-200">80 млн пользователей</span> по всему миру.
+          Зарегистрируйтесь по специальному приглашению и получите все преимущества карты Revolut.
+        </p>
+
+        <div class="mt-7 flex justify-center sm:mt-8">
+          <div class="inline-flex max-w-full items-start gap-2.5 rounded-2xl border border-amber-500/25 bg-amber-500/[0.07] px-4 py-3 text-left text-[13px] font-medium text-amber-200 sm:items-center sm:text-[15px]">
+            <i data-lucide="hourglass" class="mt-0.5 h-4 w-4 shrink-0 text-amber-400 sm:mt-0"></i>
+            <span class="break-anywhere" data-i18n-html="hero.urgency">
+              Предложение действует до <span class="font-bold text-amber-300">27 октября 2026 года</span>
+            </span>
+          </div>
+        </div>
+
+        <div class="mt-8 flex flex-col items-center gap-4 sm:mt-9">
+          <a
+            href="https://revolut.com/referral/?referral-code=kapralovai!OCT1-26-AR&amp;geo-redirect"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-gradient group inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-2xl px-6 py-4 text-base font-bold text-white shadow-glow transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] sm:min-h-[60px] sm:w-auto sm:px-10 sm:text-lg">
+            <span data-i18n="hero.cta">Зарегистрироваться в Revolut</span>
+            <i data-lucide="arrow-right" class="h-5 w-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </a>
+
+          <p class="flex items-center justify-center gap-2 text-xs text-slate-400 sm:text-sm">
+            <i data-lucide="shield-check" class="h-4 w-4 shrink-0 text-emerald-400"></i>
+            <span data-i18n="hero.trust">Бесплатная регистрация · Без обязательств</span>
+          </p>
+        </div>
+
+        <div class="mt-10 flex flex-wrap items-center justify-center gap-2 sm:mt-12 sm:gap-3">
+          <span class="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-surface px-3.5 py-2 text-[11px] font-medium text-slate-300 sm:px-4 sm:text-[13px]">
+            <i data-lucide="users" class="h-4 w-4 shrink-0 text-indigo-400"></i>
+            <span data-i18n="chips.users">80+ млн пользователей</span>
+          </span>
+          <span class="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-surface px-3.5 py-2 text-[11px] font-medium text-slate-300 sm:px-4 sm:text-[13px]">
+            <i data-lucide="smartphone" class="h-4 w-4 shrink-0 text-indigo-400"></i>
+            <span>Apple Pay &amp; Google Pay</span>
+          </span>
+          <span class="inline-flex items-center gap-2 rounded-full border border-slate-800 bg-surface px-3.5 py-2 text-[11px] font-medium text-slate-300 sm:px-4 sm:text-[13px]">
+            <i data-lucide="zap" class="h-4 w-4 shrink-0 text-indigo-400"></i>
+            <span data-i18n="chips.transfers">Мгновенные переводы</span>
+          </span>
+        </div>
+
+      </div>
+
+      <div class="reveal mt-14 sm:mt-20">
+        <div class="relative mx-auto max-w-5xl">
+          <div class="img-glow" aria-hidden="true"></div>
+          <div class="img-frame no-overlay relative aspect-[16/10] sm:aspect-[16/9] lg:aspect-[16/8]">
+            <img
+              src="https://images.unsplash.com/photo-1563013544-824ae1b704d3?auto=format&fit=crop&w=1600&q=80"
+              alt="Revolut app and card on a dark desk"
+              data-i18n-alt="hero.image.alt"
+              loading="eager"
+              decoding="async"
+              fetchpriority="high" />
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================= 4 ШАГА ======================= -->
+  <section id="steps" class="dark-section relative border-t border-slate-800/60 py-14 sm:py-20 lg:py-24">
+    <div class="safe-x mx-auto max-w-6xl">
+
+      <div class="reveal mx-auto mb-10 max-w-2xl text-center sm:mb-16">
+        <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-slate-800 bg-surface px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-slate-300">
+          <i data-lucide="list-checks" class="h-3.5 w-3.5 text-indigo-400"></i>
+          <span data-i18n="steps.badge">Всего 4 шага</span>
+        </span>
+        <h2 class="text-[26px] font-extrabold tracking-tight text-white sm:text-4xl" data-i18n="steps.h2">
+          Как получить бонус
+        </h2>
+        <p class="mt-4 text-[15px] leading-relaxed text-slate-400 sm:text-base" data-i18n="steps.subtitle">
+          Простой путь от регистрации до зачисления вознаграждения — обычно занимает несколько минут.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+        <article class="reveal group relative flex flex-col rounded-3xl border border-slate-800 bg-surface p-5 shadow-card transition-all duration-300 hover:border-slate-700 hover:bg-surface2 hover-lift sm:p-6 sm:hover:shadow-[0_25px_50px_-25px_rgba(99,102,241,0.55)]">
+          <div class="mb-4 flex items-center justify-between sm:mb-5">
+            <span class="flex h-12 w-12 items-center justify-center rounded-2xl border border-indigo-500/20 bg-indigo-500/10 text-indigo-400 transition-colors duration-300 group-hover:bg-indigo-500/20">
+              <i data-lucide="user-plus" class="h-6 w-6"></i>
+            </span>
+            <span aria-hidden="true" class="text-4xl font-black leading-none text-slate-800 transition-colors duration-300 group-hover:text-slate-700">01</span>
+          </div>
+          <h3 class="text-lg font-bold tracking-tight text-white" data-i18n="steps.s1.title">Регистрация</h3>
+          <p class="mt-2.5 text-sm leading-relaxed text-slate-400" data-i18n="steps.s1.text">
+            Перейдите по ссылке и подтвердите личность (верификация).
+          </p>
+        </article>
+
+        <article class="reveal group relative flex flex-col rounded-3xl border border-slate-800 bg-surface p-5 shadow-card transition-all duration-300 hover:border-slate-700 hover:bg-surface2 hover-lift sm:p-6 sm:hover:shadow-[0_25px_50px_-25px_rgba(99,102,241,0.55)]">
+          <div class="mb-4 flex items-center justify-between sm:mb-5">
+            <span class="flex h-12 w-12 items-center justify-center rounded-2xl border border-indigo-500/20 bg-indigo-500/10 text-indigo-400 transition-colors duration-300 group-hover:bg-indigo-500/20">
+              <i data-lucide="wallet" class="h-6 w-6"></i>
+            </span>
+            <span aria-hidden="true" class="text-4xl font-black leading-none text-slate-800 transition-colors duration-300 group-hover:text-slate-700">02</span>
+          </div>
+          <h3 class="text-lg font-bold tracking-tight text-white" data-i18n="steps.s2.title">Пополнение</h3>
+          <p class="mt-2.5 text-sm leading-relaxed text-slate-400" data-i18n="steps.s2.text">
+            Пополните счёт с помощью дебетовой карты или банковского перевода.
+          </p>
+        </article>
+
+        <article class="reveal group relative flex flex-col rounded-3xl border border-slate-800 bg-surface p-5 shadow-card transition-all duration-300 hover:border-slate-700 hover:bg-surface2 hover-lift sm:p-6 sm:hover:shadow-[0_25px_50px_-25px_rgba(99,102,241,0.55)]">
+          <div class="mb-4 flex items-center justify-between sm:mb-5">
+            <span class="flex h-12 w-12 items-center justify-center rounded-2xl border border-indigo-500/20 bg-indigo-500/10 text-indigo-400 transition-colors duration-300 group-hover:bg-indigo-500/20">
+              <i data-lucide="shopping-bag" class="h-6 w-6"></i>
+            </span>
+            <span aria-hidden="true" class="text-4xl font-black leading-none text-slate-800 transition-colors duration-300 group-hover:text-slate-700">03</span>
+          </div>
+          <h3 class="text-lg font-bold tracking-tight text-white" data-i18n="steps.s3.title">3 покупки</h3>
+          <p class="mt-2.5 text-sm leading-relaxed text-slate-400" data-i18n="steps.s3.text">
+            Совершите 3 покупки на сумму от 5€ каждая — картой или через Apple Pay / Google Pay.
+          </p>
+          <p class="mt-3 flex items-start gap-1.5 text-[11px] leading-snug text-slate-400">
+            <i data-lucide="info" class="mt-0.5 h-3.5 w-3.5 shrink-0"></i>
+            <span data-i18n="steps.s3.note">Переводы и азартные игры не учитываются.</span>
+          </p>
+        </article>
+
+        <article class="reveal group relative flex flex-col rounded-3xl border border-slate-800 bg-surface p-5 shadow-card transition-all duration-300 hover:border-slate-700 hover:bg-surface2 hover-lift sm:p-6 sm:hover:shadow-[0_25px_50px_-25px_rgba(99,102,241,0.55)]">
+          <div class="mb-4 flex items-center justify-between sm:mb-5">
+            <span class="flex h-12 w-12 items-center justify-center rounded-2xl border border-indigo-500/20 bg-indigo-500/10 text-indigo-400 transition-colors duration-300 group-hover:bg-indigo-500/20">
+              <i data-lucide="credit-card" class="h-6 w-6"></i>
+            </span>
+            <span aria-hidden="true" class="text-4xl font-black leading-none text-slate-800 transition-colors duration-300 group-hover:text-slate-700">04</span>
+          </div>
+          <h3 class="text-lg font-bold tracking-tight text-white" data-i18n="steps.s4.title">Физическая карта</h3>
+          <p class="mt-2.5 text-sm leading-relaxed text-slate-400" data-i18n="steps.s4.text">
+            Закажите физическую карту и сразу добавьте её в Apple Pay / Google Pay.
+          </p>
+        </article>
+
+      </div>
+
+      <div class="reveal mt-10 flex justify-center sm:mt-12">
+        <a
+          href="https://revolut.com/referral/?referral-code=kapralovai!OCT1-26-AR&amp;geo-redirect"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-cta-outline group inline-flex min-h-[52px] w-full items-center justify-center gap-2.5 rounded-2xl border border-slate-700 bg-surface px-6 py-3.5 text-sm font-semibold transition-all duration-300 hover:border-slate-600 hover:bg-surface2 hover:shadow-[0_0_35px_-12px_rgba(99,102,241,0.8)] active:scale-[0.98] sm:w-auto sm:text-base">
+          <span data-i18n="steps.cta">Начать с шага 1</span>
+          <i data-lucide="arrow-right" class="h-4 w-4 shrink-0 transition-transform duration-300 group-hover:translate-x-1"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================= REVOLUT BUSINESS ======================= -->
+  <section class="dark-section relative py-4 sm:py-8">
+    <div class="safe-x mx-auto max-w-6xl">
+      <div class="reveal relative overflow-hidden rounded-3xl border border-slate-800 bg-gradient-to-br from-surface via-surface2 to-surface p-6 shadow-card sm:rounded-[28px] sm:p-10 lg:p-12">
+
+        <div class="pointer-events-none absolute -right-24 -top-24 h-72 w-72 rounded-full bg-purple-600/20 blur-[100px]"></div>
+        <div class="pointer-events-none absolute -bottom-24 -left-24 h-72 w-72 rounded-full bg-blue-600/15 blur-[100px]"></div>
+
+        <div class="relative flex flex-col items-start gap-7 lg:flex-row lg:items-center lg:justify-between lg:gap-12">
+
+          <div class="w-full max-w-xl">
+            <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-purple-500/25 bg-purple-500/10 px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-purple-300">
+              <i data-lucide="briefcase" class="h-3.5 w-3.5 shrink-0"></i>
+              Revolut Business
+            </span>
+
+            <h2 class="text-[24px] font-extrabold tracking-tight text-white sm:text-3xl lg:text-4xl" data-i18n="biz.h2">
+              Нужен счёт для бизнеса?
+            </h2>
+
+            <p class="biz-offer mt-4 text-[15px] leading-relaxed sm:text-base" data-i18n-html="biz.text">
+              Получите до <span class="font-bold">160€</span> за регистрацию бизнеса в Revolut Business.
+            </p>
+
+            <ul class="mt-6 grid grid-cols-1 gap-2.5 xs:grid-cols-2">
+              <li class="flex items-center gap-2 text-sm text-slate-300">
+                <i data-lucide="check" class="h-4 w-4 shrink-0 text-emerald-400"></i>
+                <span data-i18n="biz.check1">Мультивалютный счёт</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm text-slate-300">
+                <i data-lucide="check" class="h-4 w-4 shrink-0 text-emerald-400"></i>
+                <span data-i18n="biz.check2">Корпоративные карты</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm text-slate-300">
+                <i data-lucide="check" class="h-4 w-4 shrink-0 text-emerald-400"></i>
+                <span data-i18n="biz.check3">Быстрая регистрация</span>
+              </li>
+              <li class="flex items-center gap-2 text-sm text-slate-300">
+                <i data-lucide="check" class="h-4 w-4 shrink-0 text-emerald-400"></i>
+                <span data-i18n="biz.check4">Интеграции и API</span>
+              </li>
+            </ul>
+          </div>
+
+          <div class="w-full shrink-0 lg:w-auto">
+            <a
+              href="https://revolut.com/referral/?referral-code=kapralovai!OCT1-26-AR&amp;geo-redirect"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-light group inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-2xl px-6 py-4 text-base font-bold transition-all duration-300 hover:shadow-[0_0_45px_-10px_rgba(255,255,255,0.55)] active:scale-[0.98] lg:w-auto lg:px-8">
+              <span data-i18n="biz.cta">Открыть бизнес-счёт</span>
+              <i data-lucide="arrow-up-right" class="h-5 w-5 shrink-0 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= ПРЕИМУЩЕСТВА ======================= -->
+  <section class="dark-section relative py-14 sm:py-20 lg:py-24">
+    <div class="safe-x mx-auto max-w-6xl">
+
+      <div class="reveal mx-auto mb-10 max-w-2xl text-center sm:mb-16">
+        <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-slate-800 bg-surface px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-slate-300">
+          <i data-lucide="star" class="h-3.5 w-3.5 text-indigo-400"></i>
+          <span data-i18n="benefits.badge">Преимущества</span>
+        </span>
+        <h2 class="text-[26px] font-extrabold tracking-tight text-white sm:text-4xl" data-i18n="benefits.h2">
+          Почему Revolut
+        </h2>
+        <p class="mt-4 text-[15px] leading-relaxed text-slate-400 sm:text-base" data-i18n="benefits.subtitle">
+          Всё, что нужно для повседневных финансов — в одном приложении.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-4">
+
+        <article class="reveal group rounded-3xl border border-slate-800 bg-surface p-5 shadow-card transition-all duration-300 hover:border-slate-700 hover:bg-surface2 hover-lift sm:p-6 sm:hover:shadow-[0_25px_50px_-25px_rgba(99,102,241,0.55)]">
+          <span class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-blue-500/20 bg-blue-500/10 text-blue-400 transition-transform duration-300 group-hover:scale-110 sm:mb-5">
+            <i data-lucide="globe" class="h-6 w-6"></i>
+          </span>
+          <h3 class="text-base font-bold tracking-tight text-white" data-i18n="benefits.b1.title">Мультивалютные счета</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400" data-i18n="benefits.b1.text">
+            Храните деньги в разных валютах и обменивайте по выгодному курсу.
+          </p>
+        </article>
+
+        <article class="reveal group rounded-3xl border border-slate-800 bg-surface p-5 shadow-card transition-all duration-300 hover:border-slate-700 hover:bg-surface2 hover-lift sm:p-6 sm:hover:shadow-[0_25px_50px_-25px_rgba(99,102,241,0.55)]">
+          <span class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-emerald-500/20 bg-emerald-500/10 text-emerald-400 transition-transform duration-300 group-hover:scale-110 sm:mb-5">
+            <i data-lucide="zap" class="h-6 w-6"></i>
+          </span>
+          <h3 class="text-base font-bold tracking-tight text-white" data-i18n="benefits.b2.title">Мгновенные переводы</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400" data-i18n="benefits.b2.text">
+            Отправляйте деньги без комиссий и лишних ожиданий.
+          </p>
+        </article>
+
+        <article class="reveal group rounded-3xl border border-slate-800 bg-surface p-5 shadow-card transition-all duration-300 hover:border-slate-700 hover:bg-surface2 hover-lift sm:p-6 sm:hover:shadow-[0_25px_50px_-25px_rgba(99,102,241,0.55)]">
+          <span class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-indigo-500/20 bg-indigo-500/10 text-indigo-400 transition-transform duration-300 group-hover:scale-110 sm:mb-5">
+            <i data-lucide="smartphone" class="h-6 w-6"></i>
+          </span>
+          <h3 class="text-base font-bold tracking-tight text-white" data-i18n="benefits.b3.title">Apple Pay и Google Pay</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400" data-i18n="benefits.b3.text">
+            Платите одним касанием с телефона или часов — без пластика.
+          </p>
+        </article>
+
+        <article class="reveal group rounded-3xl border border-slate-800 bg-surface p-5 shadow-card transition-all duration-300 hover:border-slate-700 hover:bg-surface2 hover-lift sm:p-6 sm:hover:shadow-[0_25px_50px_-25px_rgba(99,102,241,0.55)]">
+          <span class="mb-4 flex h-12 w-12 items-center justify-center rounded-2xl border border-purple-500/20 bg-purple-500/10 text-purple-400 transition-transform duration-300 group-hover:scale-110 sm:mb-5">
+            <i data-lucide="shield-check" class="h-6 w-6"></i>
+          </span>
+          <h3 class="text-base font-bold tracking-tight text-white" data-i18n="benefits.b4.title">Виртуальные карты</h3>
+          <p class="mt-2 text-sm leading-relaxed text-slate-400" data-i18n="benefits.b4.text">
+            Безопасные одноразовые карты для покупок в интернете.
+          </p>
+        </article>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= SHOWCASE (IMAGES) ======================= -->
+  <section class="dark-section relative py-14 sm:py-20 lg:py-24">
+    <div class="safe-x mx-auto max-w-6xl">
+
+      <div class="reveal mx-auto mb-10 max-w-2xl text-center sm:mb-16">
+        <span class="mb-4 inline-flex items-center gap-2 rounded-full border border-slate-800 bg-surface px-3.5 py-1.5 text-[11px] font-semibold uppercase tracking-wider text-slate-300">
+          <i data-lucide="layout-dashboard" class="h-3.5 w-3.5 text-indigo-400"></i>
+          <span data-i18n="showcase.badge">Приложение Revolut</span>
+        </span>
+        <h2 class="text-[26px] font-extrabold tracking-tight text-white sm:text-4xl" data-i18n="showcase.h2">
+          Всё под контролем
+        </h2>
+        <p class="mt-4 text-[15px] leading-relaxed text-slate-400 sm:text-base" data-i18n="showcase.subtitle">
+          Платежи, переводы и управление картой — в одном приложении, которое всегда под рукой.
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 gap-5 sm:gap-6 md:grid-cols-2">
+
+        <figure class="reveal relative">
+          <div class="img-frame aspect-[4/3] sm:aspect-[5/4]">
+            <img
+              src="https://images.unsplash.com/photo-1601597111158-2fceff292cdc?auto=format&fit=crop&w=1200&q=80"
+              alt="Paying with a card using a smartphone"
+              data-i18n-alt="showcase.card1.alt"
+              loading="lazy"
+              decoding="async" />
+            <figcaption class="absolute inset-x-0 bottom-0 z-10 p-6 sm:p-7">
+              <h3 class="text-lg font-bold tracking-tight text-white sm:text-xl" data-i18n="showcase.card1.title">
+                Платежи одним касанием
+              </h3>
+              <p class="mt-1.5 max-w-md text-sm leading-relaxed text-slate-300" data-i18n="showcase.card1.text">
+                Оплачивайте картой, телефоном или часами — быстро и безопасно.
+              </p>
+            </figcaption>
+          </div>
+        </figure>
+
+        <figure class="reveal relative">
+          <div class="img-frame aspect-[4/3] sm:aspect-[5/4]">
+            <img
+              src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?auto=format&fit=crop&w=1200&q=80"
+              alt="Finance app on a smartphone screen"
+              data-i18n-alt="showcase.card2.alt"
+              loading="lazy"
+              decoding="async" />
+            <figcaption class="absolute inset-x-0 bottom-0 z-10 p-6 sm:p-7">
+              <h3 class="text-lg font-bold tracking-tight text-white sm:text-xl" data-i18n="showcase.card2.title">
+                Финансы всегда рядом
+              </h3>
+              <p class="mt-1.5 max-w-md text-sm leading-relaxed text-slate-300" data-i18n="showcase.card2.text">
+                Следите за балансом, обменом валют и переводами в реальном времени.
+              </p>
+            </figcaption>
+          </div>
+        </figure>
+
+      </div>
+
+      <div class="reveal mt-10 flex justify-center sm:mt-14">
+        <a
+          href="https://revolut.com/referral/?referral-code=kapralovai!OCT1-26-AR&amp;geo-redirect"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="btn-gradient group inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-2xl px-6 py-4 text-base font-bold text-white shadow-glow transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] sm:min-h-[60px] sm:w-auto sm:px-10 sm:text-lg">
+          <span data-i18n="showcase.cta">Попробовать Revolut</span>
+          <i data-lucide="arrow-right" class="h-5 w-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1"></i>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- ======================= ФИНАЛЬНЫЙ CTA ======================= -->
+  <section class="dark-section relative overflow-hidden border-t border-slate-800/60 py-14 sm:py-20 lg:py-24">
+    <div class="pointer-events-none absolute -top-32 left-1/2 h-[420px] w-[min(720px,130vw)] -translate-x-1/2 rounded-full bg-indigo-600/15 blur-[130px]"></div>
+
+    <div class="safe-x relative mx-auto max-w-3xl text-center">
+      <div class="reveal">
+        <h2 class="text-[26px] font-extrabold tracking-tight text-white sm:text-4xl lg:text-5xl" data-i18n="final.h2">
+          Готовы получить бонус?
+        </h2>
+        <p class="mx-auto mt-5 max-w-xl text-[15px] leading-relaxed text-slate-400 sm:text-lg" data-i18n="final.text">
+          Присоединяйтесь к Revolut по персональному приглашению — это займёт всего несколько минут.
+        </p>
+
+        <div class="mt-8 flex justify-center sm:mt-9">
+          <a
+            href="https://revolut.com/referral/?referral-code=kapralovai!OCT1-26-AR&amp;geo-redirect"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="btn-gradient group inline-flex min-h-[56px] w-full items-center justify-center gap-2.5 rounded-2xl px-6 py-4 text-base font-bold text-white shadow-glow transition-transform duration-300 hover:scale-[1.03] active:scale-[0.98] sm:min-h-[60px] sm:w-auto sm:px-10 sm:text-lg">
+            <span data-i18n="final.cta">Получить бонус в Revolut</span>
+            <i data-lucide="arrow-right" class="h-5 w-5 shrink-0 transition-transform duration-300 group-hover:translate-x-1"></i>
+          </a>
+        </div>
+
+        <p class="mt-5 flex items-center justify-center gap-2 text-xs text-slate-400 sm:text-sm">
+          <i data-lucide="clock" class="h-4 w-4 shrink-0 text-amber-400"></i>
+          <span data-i18n="final.note">Предложение действует до 27 октября 2026 года</span>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- ======================= FOOTER ======================= -->
+  <footer class="dark-section safe-bottom border-t border-slate-800/60 bg-base">
+    <div class="safe-x mx-auto max-w-6xl py-12">
+
+      <div class="flex flex-col items-center gap-8 text-center">
+
+        <a href="#" class="touch-target group flex items-center gap-2.5" aria-label="Revolut Bonus">
+          <span class="flex h-9 w-9 items-center justify-center rounded-xl bg-gradient-to-br from-blue-500 via-indigo-500 to-purple-500 shadow-lg shadow-indigo-500/25">
+            <i data-lucide="sparkles" class="h-5 w-5 text-white"></i>
+          </span>
+          <span class="text-[15px] font-bold tracking-tight text-white">
+            Revolut <span class="font-medium text-slate-400">Bonus</span>
+          </span>
+        </a>
+
+        <p class="max-w-2xl text-xs leading-relaxed text-slate-400 sm:text-[13px]" data-i18n="footer.notice">
+          © 2026 Все права защищены. Данный сайт является участником партнёрской программы.
+        </p>
+
+      </div>
+    </div>
+  </footer>
+
+  <!-- ======================= COOKIE BANNER ======================= -->
+  <div id="cookie-banner" class="fixed bottom-0 left-0 right-0 z-50" role="dialog" aria-live="polite" aria-labelledby="cookie-text" hidden>
+    <div class="safe-x mx-auto flex max-w-6xl flex-col gap-4 py-4 sm:flex-row sm:items-center sm:justify-between sm:gap-6 sm:py-5">
+      <p id="cookie-text" class="cookie-text max-w-3xl text-[13px] leading-relaxed sm:text-sm" data-i18n="cookie.text">
+        Мы используем файлы cookie для улучшения работы сайта и аналитики. Продолжая использовать сайт, вы соглашаетесь с нашей политикой конфиденциальности.
+      </p>
+      <div class="flex shrink-0 flex-col-reverse gap-2.5 xs:flex-row sm:gap-3">
+        <button type="button" id="cookie-decline" class="cookie-decline inline-flex min-h-[44px] flex-1 items-center justify-center rounded-xl px-5 py-2.5 text-sm font-semibold transition-colors duration-200 active:scale-95 xs:flex-none" data-i18n="cookie.decline">Отклонить</button>
+        <button type="button" id="cookie-accept" class="cookie-accept inline-flex min-h-[44px] flex-1 items-center justify-center rounded-xl px-6 py-2.5 text-sm font-bold transition-colors duration-200 active:scale-95 xs:flex-none" data-i18n="cookie.accept">Принять</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- ======================= SCRIPTS ======================= -->
+  <script>
+    /* ============================================================
+       СЛОВАРЬ ПЕРЕВОДОВ
+       ============================================================ */
+    const TRANSLATIONS = {
+      ru: {
+        '_title': 'Revolut Bonus — бонус за регистрацию по приглашению',
+        'header.badge': 'Ограниченное предложение',
+        'header.cta': 'Получить бонус',
+
+        'hero.badge': 'Персональное приглашение · Revolut Bonus',
+        'hero.h1.line1': 'Получите бонус',
+        'hero.h1.line2': 'при регистрации в Revolut',
+        'hero.subtitle': 'Присоединяйтесь к более чем <span class="font-semibold text-slate-200">80 млн пользователей</span> по всему миру. Зарегистрируйтесь по специальному приглашению и получите все преимущества карты Revolut.',
+        'hero.urgency': 'Предложение действует до <span class="font-bold text-amber-300">27 октября 2026 года</span>',
+        'hero.cta': 'Зарегистрироваться в Revolut',
+        'hero.trust': 'Бесплатная регистрация · Без обязательств',
+        'hero.image.alt': 'Карта и приложение Revolut на тёмном столе',
+        'chips.users': '80+ млн пользователей',
+        'chips.transfers': 'Мгновенные переводы',
+
+        'steps.badge': 'Всего 4 шага',
+        'steps.h2': 'Как получить бонус',
+        'steps.subtitle': 'Простой путь от регистрации до зачисления вознаграждения — обычно занимает несколько минут.',
+        'steps.s1.title': 'Регистрация',
+        'steps.s1.text': 'Перейдите по ссылке и подтвердите личность (верификация).',
+        'steps.s2.title': 'Пополнение',
+        'steps.s2.text': 'Пополните счёт с помощью дебетовой карты или банковского перевода.',
+        'steps.s3.title': '3 покупки',
+        'steps.s3.text': 'Совершите 3 покупки на сумму от 5€ каждая — картой или через Apple Pay / Google Pay.',
+        'steps.s3.note': 'Переводы и азартные игры не учитываются.',
+        'steps.s4.title': 'Физическая карта',
+        'steps.s4.text': 'Закажите физическую карту и сразу добавьте её в Apple Pay / Google Pay.',
+        'steps.cta': 'Начать с шага 1',
+
+        'biz.h2': 'Нужен счёт для бизнеса?',
+        'biz.text': 'Получите до <span class="font-bold">160€</span> за регистрацию бизнеса в Revolut Business.',
+        'biz.check1': 'Мультивалютный счёт',
+        'biz.check2': 'Корпоративные карты',
+        'biz.check3': 'Быстрая регистрация',
+        'biz.check4': 'Интеграции и API',
+        'biz.cta': 'Открыть бизнес-счёт',
+
+        'benefits.badge': 'Преимущества',
+        'benefits.h2': 'Почему Revolut',
+        'benefits.subtitle': 'Всё, что нужно для повседневных финансов — в одном приложении.',
+        'benefits.b1.title': 'Мультивалютные счета',
+        'benefits.b1.text': 'Храните деньги в разных валютах и обменивайте по выгодному курсу.',
+        'benefits.b2.title': 'Мгновенные переводы',
+        'benefits.b2.text': 'Отправляйте деньги без комиссий и лишних ожиданий.',
+        'benefits.b3.title': 'Apple Pay и Google Pay',
+        'benefits.b3.text': 'Платите одним касанием с телефона или часов — без пластика.',
+        'benefits.b4.title': 'Виртуальные карты',
+        'benefits.b4.text': 'Безопасные одноразовые карты для покупок в интернете.',
+
+        'showcase.badge': 'Приложение Revolut',
+        'showcase.h2': 'Всё под контролем',
+        'showcase.subtitle': 'Платежи, переводы и управление картой — в одном приложении, которое всегда под рукой.',
+        'showcase.card1.title': 'Платежи одним касанием',
+        'showcase.card1.text': 'Оплачивайте картой, телефоном или часами — быстро и безопасно.',
+        'showcase.card1.alt': 'Оплата картой через смартфон',
+        'showcase.card2.title': 'Финансы всегда рядом',
+        'showcase.card2.text': 'Следите за балансом, обменом валют и переводами в реальном времени.',
+        'showcase.card2.alt': 'Финансовое приложение на экране смартфона',
+        'showcase.cta': 'Попробовать Revolut',
+
+        'final.h2': 'Готовы получить бонус?',
+        'final.text': 'Присоединяйтесь к Revolut по персональному приглашению — это займёт всего несколько минут.',
+        'final.cta': 'Получить бонус в Revolut',
+        'final.note': 'Предложение действует до 27 октября 2026 года',
+
+        'footer.notice': '© 2026 Все права защищены. Данный сайт является участником партнёрской программы.',
+
+        'cookie.text': 'Мы используем файлы cookie для улучшения работы сайта и аналитики. Продолжая использовать сайт, вы соглашаетесь с нашей политикой конфиденциальности.',
+        'cookie.accept': 'Принять',
+        'cookie.decline': 'Отклонить'
+      },
+
+      et: {
+        '_title': 'Revolut Bonus — registreerimisboonus kutse kaudu',
+        'header.badge': 'Piiratud pakkumine',
+        'header.cta': 'Saa boonus',
+
+        'hero.badge': 'Isiklik kutse · Revolut Bonus',
+        'hero.h1.line1': 'Saa boonust',
+        'hero.h1.line2': 'Revolutiga liitudes',
+        'hero.subtitle': 'Liitu rohkem kui <span class="font-semibold text-slate-200">80 miljoni kasutajaga</span> üle maailma. Registreeru erilise kutse kaudu ja saa kõik Revoluti kaardi eelised.',
+        'hero.urgency': 'Pakkumine kehtib kuni <span class="font-bold text-amber-300">27. oktoober 2026</span>',
+        'hero.cta': 'Registreeru Revolutis',
+        'hero.trust': 'Tasuta registreerimine · Ilma kohustusteta',
+        'hero.image.alt': 'Revoluti kaart ja rakendus tumedal laual',
+        'chips.users': '80+ miljonit kasutajat',
+        'chips.transfers': 'Kohesed ülekanded',
+
+        'steps.badge': 'Ainult 4 sammu',
+        'steps.h2': 'Kuidas boonust saada',
+        'steps.subtitle': 'Lihtne tee registreerimisest tasu laekumiseni — tavaliselt võtab vaid mõne minuti.',
+        'steps.s1.title': 'Registreerimine',
+        'steps.s1.text': 'Klõpsa lingil ja kinnita oma isik (verifitseerimine).',
+        'steps.s2.title': 'Täiendamine',
+        'steps.s2.text': 'Täienda kontot deebetkaardi või pangaülekandega.',
+        'steps.s3.title': '3 ostu',
+        'steps.s3.text': 'Tee 3 ostu, igaüks vähemalt 5€ — kaardiga või Apple Pay / Google Pay kaudu.',
+        'steps.s3.note': 'Ülekandeid ja hasartmänge ei arvestata.',
+        'steps.s4.title': 'Füüsiline kaart',
+        'steps.s4.text': 'Telli füüsiline kaart ja lisa see kohe Apple Pay / Google Pay keskkonda.',
+        'steps.cta': 'Alusta 1. sammust',
+
+        'biz.h2': 'Vajad ärkontot?',
+        'biz.text': 'Saa kuni <span class="font-bold">160€</span> Revolut Business\'i registreerimise eest.',
+        'biz.check1': 'Mitme valuuta konto',
+        'biz.check2': 'Ettevõtte kaardid',
+        'biz.check3': 'Kiire registreerimine',
+        'biz.check4': 'Integratsioonid ja API',
+        'biz.cta': 'Ava ärikonto',
+
+        'benefits.badge': 'Eelised',
+        'benefits.h2': 'Miks Revolut',
+        'benefits.subtitle': 'Kõik, mida vajad igapäevaseks rahanduseks — ühes rakenduses.',
+        'benefits.b1.title': 'Mitme valuuta kontod',
+        'benefits.b1.text': 'Hoia raha erinevates valuutades ja vaheta soodsa kursiga.',
+        'benefits.b2.title': 'Kohesed ülekanded',
+        'benefits.b2.text': 'Saada raha ilma tasudeta ja tarbetu ootamiseta.',
+        'benefits.b3.title': 'Apple Pay ja Google Pay',
+        'benefits.b3.text': 'Maksa ühe puutega telefonist või kellast — ilma plastikuta.',
+        'benefits.b4.title': 'Virtuaalsed kaardid',
+        'benefits.b4.text': 'Turvalised ühekordsed kaardid veebiostudeks.',
+
+        'showcase.badge': 'Revoluti rakendus',
+        'showcase.h2': 'Kõik on kontrolli all',
+        'showcase.subtitle': 'Maksed, ülekanded ja kaardi haldamine — ühes rakenduses, mis on alati käepärast.',
+        'showcase.card1.title': 'Maksed ühe puutega',
+        'showcase.card1.text': 'Maksa kaardiga, telefoniga või kellaga — kiiresti ja turvaliselt.',
+        'showcase.card1.alt': 'Kaardiga maksmine nutitelefoni kaudu',
+        'showcase.card2.title': 'Finantsid alati käepärast',
+        'showcase.card2.text': 'Jälgi saldot, valuutavahetust ja ülekandeid reaalajas.',
+        'showcase.card2.alt': 'Finantsrakendus nutitelefoni ekraanil',
+        'showcase.cta': 'Proovi Revoluti',
+
+        'final.h2': 'Valmis boonust saama?',
+        'final.text': 'Liitu Revolutiga isikliku kutse kaudu — see võtab vaid mõne minuti.',
+        'final.cta': 'Saa boonust Revolutis',
+        'final.note': 'Pakkumine kehtib kuni 27. oktoober 2026',
+
+        'footer.notice': '© 2026 Kõik õigused kaitstud. See sait on partnerlusprogrammi liige.',
+
+        'cookie.text': 'Kasutame küpsiseid, et parandada saidi toimimist ja analüütikat. Saiti kasutamist jätkates nõustute meie privaatsuspoliitikaga.',
+        'cookie.accept': 'Nõustun',
+        'cookie.decline': 'Keeldun'
+      },
+
+      en: {
+        '_title': 'Revolut Bonus — sign-up bonus by invitation',
+        'header.badge': 'Limited offer',
+        'header.cta': 'Get bonus',
+
+        'hero.badge': 'Personal invitation · Revolut Bonus',
+        'hero.h1.line1': 'Get a bonus',
+        'hero.h1.line2': 'when you sign up for Revolut',
+        'hero.subtitle': 'Join over <span class="font-semibold text-slate-200">80 million users</span> worldwide. Sign up with a special invitation and get all the benefits of the Revolut card.',
+        'hero.urgency': 'Offer valid until <span class="font-bold text-amber-300">October 27, 2026</span>',
+        'hero.cta': 'Sign up for Revolut',
+        'hero.trust': 'Free registration · No obligations',
+        'hero.image.alt': 'Revolut card and app on a dark desk',
+        'chips.users': '80+ million users',
+        'chips.transfers': 'Instant transfers',
+
+        'steps.badge': 'Only 4 steps',
+        'steps.h2': 'How to get the bonus',
+        'steps.subtitle': 'A simple path from sign-up to reward — usually takes just a few minutes.',
+        'steps.s1.title': 'Registration',
+        'steps.s1.text': 'Follow the link and verify your identity.',
+        'steps.s2.title': 'Top up',
+        'steps.s2.text': 'Top up your account via debit card or bank transfer.',
+        'steps.s3.title': '3 purchases',
+        'steps.s3.text': 'Make 3 purchases of at least €5 each — by card or via Apple Pay / Google Pay.',
+        'steps.s3.note': 'Transfers and gambling are not counted.',
+        'steps.s4.title': 'Physical card',
+        'steps.s4.text': 'Order a physical card and add it to Apple Pay / Google Pay right away.',
+        'steps.cta': 'Start with step 1',
+
+        'biz.h2': 'Need a business account?',
+        'biz.text': 'Get up to <span class="font-bold">€160</span> for registering a business with Revolut Business.',
+        'biz.check1': 'Multi-currency account',
+        'biz.check2': 'Corporate cards',
+        'biz.check3': 'Fast registration',
+        'biz.check4': 'Integrations and API',
+        'biz.cta': 'Open business account',
+
+        'benefits.badge': 'Benefits',
+        'benefits.h2': 'Why Revolut',
+        'benefits.subtitle': 'Everything you need for everyday finances — in one app.',
+        'benefits.b1.title': 'Multi-currency accounts',
+        'benefits.b1.text': 'Hold money in multiple currencies and exchange at a great rate.',
+        'benefits.b2.title': 'Instant transfers',
+        'benefits.b2.text': 'Send money without fees or unnecessary waiting.',
+        'benefits.b3.title': 'Apple Pay and Google Pay',
+        'benefits.b3.text': 'Pay with one tap from your phone or watch — no plastic needed.',
+        'benefits.b4.title': 'Virtual cards',
+        'benefits.b4.text': 'Secure single-use cards for online shopping.',
+
+        'showcase.badge': 'Revolut app',
+        'showcase.h2': 'Everything under control',
+        'showcase.subtitle': 'Payments, transfers and card management — in one app that is always at hand.',
+        'showcase.card1.title': 'Payments with one tap',
+        'showcase.card1.text': 'Pay by card, phone or watch — fast and secure.',
+        'showcase.card1.alt': 'Paying by card using a smartphone',
+        'showcase.card2.title': 'Finances always at hand',
+        'showcase.card2.text': 'Track your balance, currency exchange and transfers in real time.',
+        'showcase.card2.alt': 'Finance app on a smartphone screen',
+        'showcase.cta': 'Try Revolut',
+
+        'final.h2': 'Ready to get your bonus?',
+        'final.text': 'Join Revolut with a personal invitation — it only takes a few minutes.',
+        'final.cta': 'Get bonus in Revolut',
+        'final.note': 'Offer valid until October 27, 2026',
+
+        'footer.notice': '© 2026 All rights reserved. This site is a member of the affiliate program.',
+
+        'cookie.text': 'We use cookies to improve the website and for analytics. By continuing to use the site, you agree to our privacy policy.',
+        'cookie.accept': 'Accept',
+        'cookie.decline': 'Decline'
+      }
+    };
+
+    /* ============================================================
+       ПРИМЕНЕНИЕ ПЕРЕВОДОВ
+       ============================================================ */
+    const YEAR = new Date().getFullYear();
+
+    function setLanguage(lang) {
+      if (!TRANSLATIONS[lang]) lang = 'ru';
+      const dict = TRANSLATIONS[lang];
+
+      document.querySelectorAll('[data-i18n]').forEach(function (el) {
+        const key = el.getAttribute('data-i18n');
+        if (dict[key] !== undefined) {
+          el.textContent = dict[key].replace(/\{year\}/g, YEAR);
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-html]').forEach(function (el) {
+        const key = el.getAttribute('data-i18n-html');
+        if (dict[key] !== undefined) {
+          el.innerHTML = dict[key].replace(/\{year\}/g, YEAR);
+        }
+      });
+
+      document.querySelectorAll('[data-i18n-alt]').forEach(function (el) {
+        const key = el.getAttribute('data-i18n-alt');
+        if (dict[key] !== undefined) {
+          el.setAttribute('alt', dict[key]);
+        }
+      });
+
+      if (dict['_title']) document.title = dict['_title'];
+
+      document.documentElement.setAttribute('lang', lang);
+
+      document.querySelectorAll('#lang-switcher .lang-btn').forEach(function (btn) {
+        const isActive = btn.getAttribute('data-lang') === lang;
+        btn.classList.toggle('active', isActive);
+        btn.setAttribute('aria-pressed', isActive ? 'true' : 'false');
+      });
+
+      try { localStorage.setItem('preferredLang', lang); } catch (e) {}
+    }
+
+    document.querySelectorAll('#lang-switcher .lang-btn').forEach(function (btn) {
+      btn.addEventListener('click', function () {
+        setLanguage(btn.getAttribute('data-lang'));
+      });
+    });
+
+    (function initLanguage() {
+      let initial = 'ru';
+      try {
+        const saved = localStorage.getItem('preferredLang');
+        if (saved && TRANSLATIONS[saved]) initial = saved;
+      } catch (e) {}
+      setLanguage(initial);
+    })();
+
+    /* ============================================================
+       ИКОНКИ LUCIDE
+       ============================================================ */
+    if (window.lucide && typeof lucide.createIcons === 'function') {
+      lucide.createIcons();
+    }
+
+    /* ============================================================
+       ПЛАВНОЕ ПОЯВЛЕНИЕ СЕКЦИЙ
+       ============================================================ */
+    (function () {
+      const items = document.querySelectorAll('.reveal');
+      if (!('IntersectionObserver' in window)) {
+        items.forEach(function (el) { el.classList.add('is-visible'); });
+        return;
+      }
+      const observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12, rootMargin: '0px 0px -60px 0px' });
+
+      items.forEach(function (el, i) {
+        el.style.transitionDelay = (i % 4) * 70 + 'ms';
+        observer.observe(el);
+      });
+    })();
+
+    /* ============================================================
+       COOKIE-БАННЕР
+       ============================================================ */
+    (function cookieBanner() {
+      var KEY = 'cookieConsent';
+      var banner = document.getElementById('cookie-banner');
+      if (!banner) return;
+
+      var stored = null;
+      try { stored = localStorage.getItem(KEY); } catch (e) {}
+      if (stored !== null) return; // выбор уже сделан — баннер не показываем
+
+      banner.hidden = false;
+      // следующий кадр, чтобы сработала плавная анимация появления
+      requestAnimationFrame(function () {
+        requestAnimationFrame(function () { banner.classList.add('is-shown'); });
+      });
+
+      function close(value) {
+        try { localStorage.setItem(KEY, value); } catch (e) {}
+        banner.classList.remove('is-shown');
+        banner.classList.add('is-hiding');
+        setTimeout(function () { banner.hidden = true; }, 600);
+      }
+
+      document.getElementById('cookie-accept').addEventListener('click', function () { close('true'); });
+      document.getElementById('cookie-decline').addEventListener('click', function () { close('false'); });
+    })();
+
+    /* ============================================================
+       ЗАЩИТА ОТ ГОРИЗОНТАЛЬНОГО СКРОЛЛА
+       (вертикальная прокрутка не блокируется)
+       ============================================================ */
+    (function ensureNoHorizontalScroll() {
+      function check() {
+        if (document.documentElement.scrollWidth > window.innerWidth + 1) {
+          document.documentElement.style.overflowX = 'hidden';
+        }
+        // Гарантируем, что вертикальная прокрутка всегда доступна
+        document.documentElement.style.overflowY = 'auto';
+        document.body.style.overflowY = 'auto';
+      }
+      window.addEventListener('resize', check);
+      check();
+    })();
+  </script>
+
+</body>
+</html>
