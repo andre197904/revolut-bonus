@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://revolut-bonus.idaviru.com.ee/sitemap.xml
